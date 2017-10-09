@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flow Engine</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+   <main>
+    <h1>Flow Engine</h1>
+    <div id="rules">
+        <form>
+            <p>Rule</p>
+            <input type="number" name="id" value="1">
+            <input type="text" name="title" value="Do you want to play a videogame?">
+            <input type="textarea" name="body" value="function(obj){return obj.play==true;}">
+            <input type="number" name="true_id" value="2" placeholder="null">
+            <input type="number" name="false_id" value="" placeholder="null">
+        </form>
+
+        <form>
+            <p>Rule</p>
+            <input type="number" name="id" value="2">
+            <input type="text" name="title" value="Which console you have?">
+            <input type="textarea" name="body" value="function(obj){return obj.console=='switch';}">
+            <input type="number" name="true_id" value="3" placeholder="null">
+            <input type="number" name="false_id" value="" placeholder="null">
+        </form>
+        
+        <form>
+            <p>Rule</p>
+            <input type="number" name="id" value="3">
+            <input type="text" name="title" value="Want to play Super Mario?">
+            <input type="textarea" name="body" value="function(obj){return obj.firstGame==true;}">
+            <input type="number" name="true_id" value="" placeholder="null">
+            <input type="number" name="false_id" value="4" placeholder="null">
+        </form>
+        
+        <form>
+            <p>Rule</p>
+            <input type="number" name="id" value="4">
+            <input type="text" name="title" value="What about Legend of Zelda?">
+            <input type="textarea" name="body" value="function(obj){return obj.secondGame!=false;}">
+            <input type="number" name="true_id" value="" placeholder="null">
+            <input type="number" name="false_id" value="" placeholder="null">
+        </form>
+    </div>
+
+    <form>
+        <p>Object</p>
+        <input type="textarea" id="inputObjectText" name="inputObject" value='{ "play": true, "console": "switch", "firstGame": false, "secondGame": true }'>
+    </form>
+
+    <button onClick="go()">Go with the flow 🤘🎸</button>
+    <p id="hint">🤓 look at the console</p>
+    
+    </main>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
